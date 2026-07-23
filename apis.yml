@@ -1,0 +1,148 @@
+aid: leeds-building-society
+url: https://raw.githubusercontent.com/api-evangelist/leeds-building-society/refs/heads/main/apis.yml
+name: Leeds Building Society
+kind: company
+description: >-
+  Leeds Building Society is the fifth-largest building society in the United
+  Kingdom, a mutual owned by and run for the benefit of its members rather than
+  shareholders. Founded in 1875 and headquartered in Leeds, West Yorkshire, it
+  holds over GBP 31 billion in assets and serves more than 991,000 members,
+  focusing on savings and residential mortgages (including shared-ownership and
+  later-life lending) rather than current accounts. It is authorised by the
+  Prudential Regulation Authority and regulated by the Financial Conduct
+  Authority and the PRA. Because Leeds Building Society does not provide payment
+  or current accounts, it is not one of the CMA9 mandated banks and is not an
+  Account Servicing Payment Service Provider (ASPSP) under PSD2 / UK Open
+  Banking; it participates in Open Banking as a data consumer (for example using
+  Experian Boost and Account Information data to speed mortgage affordability
+  decisions) rather than as an API provider. As of this review it publishes no
+  public developer portal, no OBIE Open Data endpoint, and no OBIE Read/Write
+  APIs. The OBIE standard specifications below are captured as shared-standard
+  references, not as Leeds Building Society API contracts.
+accessModel:
+  pricing: unknown
+  onboarding: none
+  trial: false
+  try_now: false
+  public: false
+  label: No public API program
+  confidence: high
+  source:
+  - review
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Building Society
+- Mutual
+- Savings
+- Mortgages
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: leeds-building-society:obie-open-data-api
+  name: OBIE Open Data API (shared standard)
+  description: >-
+    The UK Open Banking (OBIE) Open Data API standard for public, unauthenticated
+    reference data - ATM locations, branch locations, personal and business
+    current accounts, unsecured SME loans, and commercial credit cards. This is
+    the shared OBIE standard specification, NOT a Leeds Building Society API
+    contract. Leeds Building Society is not a CMA9 ASPSP and does not currently
+    publish an Open Data endpoint; no live base URL was confirmed for this bank.
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - Open Data
+  - OBIE
+  - Reference Data
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-standard-swagger.json
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:obie-account-transaction-information-api
+  name: OBIE Account and Transaction Information API (AIS, shared standard)
+  description: >-
+    The OBIE Read/Write Account and Transaction Information (AIS) standard for
+    retrieving account, balance, transaction, and beneficiary data with customer
+    consent, secured with FAPI-grade OAuth2/OIDC, mutual-TLS, and PSD2 strong
+    customer authentication. Captured here as the shared OBIE standard reference;
+    Leeds Building Society does not offer current accounts and does not publish
+    this API. Unverified for this bank - no base URL was confirmed.
+  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
+  tags:
+  - Account Information
+  - AIS
+  - OBIE
+  - FAPI
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: leeds-building-society:obie-payment-initiation-api
+  name: OBIE Payment Initiation API (PIS, shared standard)
+  description: >-
+    The OBIE Read/Write Payment Initiation (PIS) standard for initiating
+    domestic, scheduled, standing-order, international, and file payments with
+    customer consent, secured with FAPI OAuth2/OIDC, mutual-TLS, and PSD2 strong
+    customer authentication. Captured here as the shared OBIE standard reference;
+    Leeds Building Society is not a payment account provider and does not publish
+    this API. Unverified for this bank - no base URL was confirmed.
+  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
+  tags:
+  - Payment Initiation
+  - PIS
+  - OBIE
+  - FAPI
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: leeds-building-society:obie-confirmation-of-funds-api
+  name: OBIE Confirmation of Funds API (CBPII, shared standard)
+  description: >-
+    The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming
+    whether funds are available on a payment account, secured with FAPI
+    OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication. Captured
+    here as the shared OBIE standard reference; Leeds Building Society does not
+    operate payment accounts and does not publish this API. Unverified for this
+    bank - no base URL was confirmed.
+  humanURL: https://github.com/OpenBankingUK/read-write-api-specs
+  tags:
+  - Confirmation of Funds
+  - CBPII
+  - OBIE
+  - FAPI
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+common:
+- type: Website
+  url: https://www.leedsbuildingsociety.co.uk/
+- type: Support
+  url: https://www.leedsbuildingsociety.co.uk/help-and-contact/
+- type: Blog
+  url: https://www.leedsbuildingsociety.co.uk/newsroom/
+- type: TermsOfService
+  url: https://www.leedsbuildingsociety.co.uk/legal-notice-and-website-terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.leedsbuildingsociety.co.uk/security/use-of-personal-information/
+- type: Security
+  url: https://www.leedsbuildingsociety.co.uk/security/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/leeds-building-society
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

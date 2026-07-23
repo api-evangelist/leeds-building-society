@@ -1,0 +1,89 @@
+aid: leeds-building-society
+name: Leeds Building Society
+review:
+  question: Does Leeds Building Society publish a public developer portal, a live UK Open Banking (OBIE) Open Data endpoint, or any OBIE Read/Write APIs?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Leeds Building Society exposes NO public API surface. It is a mutual
+    savings-and-mortgage building society (the UK's fifth-largest) that does
+    not provide current or payment accounts, so it is not one of the CMA9
+    mandated banks and is not an Account Servicing Payment Service Provider
+    (ASPSP) under PSD2 / UK Open Banking. It engages with Open Banking only as
+    a DATA CONSUMER - for example using Experian Boost and Account Information
+    data to speed mortgage affordability decisions - not as an API provider.
+
+    No developer portal exists. Candidate hosts developer.leedsbuildingsociety.co.uk,
+    api.leedsbuildingsociety.co.uk, and openbanking.leedsbuildingsociety.co.uk
+    all fail to resolve (connection failure, no DNS). The main website
+    www.leedsbuildingsociety.co.uk returns HTTP 200 but soft-404s every path:
+    /open-banking/v2.3/atms, /.well-known/open-banking/, and a deliberately
+    bogus control path all return the same text/html marketing shell, so no
+    Open Data endpoint could be confirmed. No live 200 JSON Open Data response
+    was obtained.
+
+    The OBIE standard specifications are represented in apis.yml purely as
+    shared-standard references (Open Data, plus Read/Write AIS/PIS/CBPII),
+    clearly labelled as NOT Leeds Building Society contracts and unverified for
+    this bank. The only spec harvested is the shared OBIE Open Data standard
+    Swagger (opendata-swagger.json, v1.3) from OpenBankingUK - it is the
+    industry standard, not a bank-proprietary definition.
+  specProvenance:
+    - artifact: openapi/obie-opendata-standard-swagger.json
+      provenance: OBIE-standard
+      source: https://github.com/OpenBankingUK/opendata-api-spec-compiled (opendata-swagger.json)
+      note: Shared UK Open Banking Open Data API standard v1.3 (Swagger 2.0). NOT a Leeds Building Society contract.
+  authModel:
+    openData: Unauthenticated (standard) - but no Leeds Building Society Open Data endpoint is published.
+    readWrite: FAPI-grade OAuth2/OIDC + mutual-TLS + PSD2 strong customer authentication (standard) - not implemented by Leeds Building Society, which is not an ASPSP.
+  developerPortalConfirmed: false
+  openDataEndpointConfirmed: false
+  openDataBaseURL: ''
+  readWriteConformance: not-applicable
+  transports:
+    - protocol: REST
+      scheme: https
+      note: No provider REST API is published by Leeds Building Society. The only live host, www.leedsbuildingsociety.co.uk, serves the consumer marketing/online-banking website (soft-404s all API-style paths).
+      documented: false
+  probes:
+    - url: https://developer.leedsbuildingsociety.co.uk/
+      status: 000
+      note: Does not resolve / connection failure - no developer portal host.
+    - url: https://api.leedsbuildingsociety.co.uk/open-banking/v3.1/atms
+      status: 000
+      note: Does not resolve / connection failure - no API host.
+    - url: https://openbanking.leedsbuildingsociety.co.uk/
+      status: 000
+      note: Does not resolve / connection failure.
+    - url: https://www.leedsbuildingsociety.co.uk/open-banking/v2.3/atms
+      status: 200
+      note: Soft-404 - returns text/html marketing shell, not JSON. Same shell served for a bogus control path.
+    - url: https://www.leedsbuildingsociety.co.uk/.well-known/open-banking/
+      status: 200
+      note: Soft-404 - returns text/html marketing shell, not an Open Banking well-known document.
+    - url: https://www.leedsbuildingsociety.co.uk/
+      status: 200
+      note: Live consumer website (real home page).
+sources:
+  - url: https://en.wikipedia.org/wiki/Leeds_Building_Society
+    type: Reference
+    note: Founding 1875, mutual, HQ Leeds, ~GBP 31.6bn assets, 991k+ members, savings/mortgages/investments/insurance - no current accounts.
+  - url: https://www.openbankingexpo.com/news/lc-mortgages-leeds-building-society-pilot-open-banking-to-speed-up-mortgage-process/
+    type: Reference
+    note: Leeds Building Society uses Open Banking as a data consumer in mortgage processing, not as an ASPSP/API provider.
+  - url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+    type: OpenAPI
+    note: Source of the shared OBIE Open Data standard Swagger harvested into openapi/.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: APIReference
+    note: Shared OBIE Read/Write standard (AIS/PIS/CBPII) referenced as standard, not implemented by Leeds Building Society.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: true
+  reason: |
+    Bootstrap identity captured for a non-ASPSP mutual with no public API
+    program. OBIE surfaces are represented strictly as shared-standard
+    references (unverified for this bank, no invented hosts). Only the shared
+    OBIE Open Data standard Swagger was harvested. Classification: built-stub.
