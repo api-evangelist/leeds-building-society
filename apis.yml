@@ -129,6 +129,10 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: DomainSecurity
+  url: security/leeds-building-society-domain-security.yml
+- type: LLMsTxt
+  url: llms/leeds-building-society-llms.txt
 - type: Website
   url: https://www.leedsbuildingsociety.co.uk/
 - type: Support

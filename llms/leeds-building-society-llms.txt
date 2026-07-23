@@ -1,0 +1,21 @@
+# Leeds Building Society
+
+> Leeds Building Society is the UK's fifth-largest building society, a mutual owned by and run for its members, founded in 1875 and headquartered in Leeds. It focuses on savings and residential mortgages (including shared-ownership and later-life lending) and does not provide current or payment accounts. It is NOT one of the CMA9 mandated banks and is NOT an Account Servicing Payment Service Provider (ASPSP) under PSD2 / UK Open Banking; it participates in Open Banking only as a DATA CONSUMER. It publishes no public developer portal, no OBIE Open Data endpoint, and no OBIE Read/Write APIs.
+
+## About
+- Website: https://www.leedsbuildingsociety.co.uk/
+- Newsroom / Blog: https://www.leedsbuildingsociety.co.uk/newsroom/
+- Help and contact: https://www.leedsbuildingsociety.co.uk/help-and-contact/
+- Security: https://www.leedsbuildingsociety.co.uk/security/
+
+## API status
+- No public API program. No developer portal, no Open Data endpoint, and no Read/Write APIs are published by Leeds Building Society.
+- The OBIE specifications referenced in this catalog are shared UK Open Banking STANDARD documents, not Leeds Building Society API contracts, and are unverified for this bank.
+
+## Shared-standard references (OBIE, not Leeds contracts)
+- OBIE Open Data API standard: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+- OBIE Read/Write API specs (AIS/PIS/CBPII): https://github.com/OpenBankingUK/read-write-api-specs
+
+## Legal
+- Terms of use: https://www.leedsbuildingsociety.co.uk/legal-notice-and-website-terms-of-use/
+- Privacy / use of personal information: https://www.leedsbuildingsociety.co.uk/security/use-of-personal-information/

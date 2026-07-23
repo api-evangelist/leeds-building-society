@@ -1,0 +1,37 @@
+generated: '2026-07-23'
+method: probed
+source: live probes of the Leeds Building Society public web host
+host: https://www.leedsbuildingsociety.co.uk
+note: >-
+  Every /.well-known/ path returns HTTP 200 but with content-type text/html - the
+  same marketing shell the site serves for any unknown path (a soft-404). No real
+  RFC 9116 security.txt, OIDC/OAuth discovery document, api-catalog, or ai-plugin
+  manifest is published. No raw files were saved because none of the responses are
+  genuine well-known documents. Leeds Building Society publishes no public API and
+  no machine-readable discovery surface. This is recorded to avoid re-probing.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/html
+  real: false
+  note: soft-404 HTML shell, not an RFC 9116 document
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  real: false
+  note: soft-404 HTML shell, not an OIDC discovery document
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  real: false
+  note: soft-404 HTML shell, not an RFC 8414 document
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  real: false
+  note: soft-404 HTML shell, not an RFC 9727 api-catalog
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  real: false
+  note: soft-404 HTML shell, not an ai-plugin manifest
