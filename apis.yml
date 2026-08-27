@@ -58,36 +58,14 @@ created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
 apis:
-- aid: leeds-building-society:obie-open-data-api
-  name: OBIE Open Data API (shared standard)
-  description: >-
-    The UK Open Banking (OBIE) Open Data API standard for public, unauthenticated
-    reference data - ATM locations, branch locations, personal and business
-    current accounts, unsecured SME loans, and commercial credit cards. This is
-    the shared OBIE standard specification, NOT a Leeds Building Society API
-    contract. Leeds Building Society is not a CMA9 ASPSP and does not currently
-    publish an Open Data endpoint; no live base URL was confirmed for this bank.
-  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
-  tags:
-  - Open Data
-  - OBIE
-  - Reference Data
-  properties:
-  - type: OpenAPI
-    url: openapi/obie-opendata-standard-swagger.json
-  - type: Documentation
-    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
-  - type: APIReference
-    url: https://github.com/OpenBankingUK/opendata-api-specs
 - aid: leeds-building-society:obie-account-transaction-information-api
   name: OBIE Account and Transaction Information API (AIS, shared standard)
   description: >-
-    The OBIE Read/Write Account and Transaction Information (AIS) standard for
-    retrieving account, balance, transaction, and beneficiary data with customer
-    consent, secured with FAPI-grade OAuth2/OIDC, mutual-TLS, and PSD2 strong
-    customer authentication. Captured here as the shared OBIE standard reference;
-    Leeds Building Society does not offer current accounts and does not publish
-    this API. Unverified for this bank - no base URL was confirmed.
+    The OBIE Read/Write Account and Transaction Information (AIS) standard for retrieving account, balance,
+    transaction, and beneficiary data with customer consent, secured with FAPI-grade OAuth2/OIDC, mutual-TLS,
+    and PSD2 strong customer authentication. Captured here as the shared OBIE standard reference; Leeds
+    Building Society does not offer current accounts and does not publish this API. Unverified for this
+    bank - no base URL was confirmed.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   tags:
   - Account Information
@@ -102,12 +80,11 @@ apis:
 - aid: leeds-building-society:obie-payment-initiation-api
   name: OBIE Payment Initiation API (PIS, shared standard)
   description: >-
-    The OBIE Read/Write Payment Initiation (PIS) standard for initiating
-    domestic, scheduled, standing-order, international, and file payments with
-    customer consent, secured with FAPI OAuth2/OIDC, mutual-TLS, and PSD2 strong
-    customer authentication. Captured here as the shared OBIE standard reference;
-    Leeds Building Society is not a payment account provider and does not publish
-    this API. Unverified for this bank - no base URL was confirmed.
+    The OBIE Read/Write Payment Initiation (PIS) standard for initiating domestic, scheduled, standing-order,
+    international, and file payments with customer consent, secured with FAPI OAuth2/OIDC, mutual-TLS,
+    and PSD2 strong customer authentication. Captured here as the shared OBIE standard reference; Leeds
+    Building Society is not a payment account provider and does not publish this API. Unverified for this
+    bank - no base URL was confirmed.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   tags:
   - Payment Initiation
@@ -122,12 +99,10 @@ apis:
 - aid: leeds-building-society:obie-confirmation-of-funds-api
   name: OBIE Confirmation of Funds API (CBPII, shared standard)
   description: >-
-    The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming
-    whether funds are available on a payment account, secured with FAPI
-    OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication. Captured
-    here as the shared OBIE standard reference; Leeds Building Society does not
-    operate payment accounts and does not publish this API. Unverified for this
-    bank - no base URL was confirmed.
+    The OBIE Read/Write Confirmation of Funds (CBPII) standard for confirming whether funds are available
+    on a payment account, secured with FAPI OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication.
+    Captured here as the shared OBIE standard reference; Leeds Building Society does not operate payment
+    accounts and does not publish this API. Unverified for this bank - no base URL was confirmed.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   tags:
   - Confirmation of Funds
@@ -139,6 +114,84 @@ apis:
     url: https://openbankinguk.github.io/read-write-api-site3/
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: leeds-building-society:leeds-building-society-atm-api
+  name: Leeds Building Society ATM API
+  description: Endpoint for getting ATM data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - ATM
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-atm-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:leeds-building-society-bca-api
+  name: Leeds Building Society BCA API
+  description: Endpoint for getting Business Current Account data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - BCA
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-bca-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:leeds-building-society-branch-api
+  name: Leeds Building Society Branch API
+  description: Endpoint for getting Branch data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - Branch
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-branch-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:leeds-building-society-ccc-api
+  name: Leeds Building Society CCC API
+  description: Endpoint for getting Commercial Credit Card data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - CCC
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-ccc-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:leeds-building-society-pca-api
+  name: Leeds Building Society PCA API
+  description: Endpoint for getting Personal Current Account data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - PCA
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-pca-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
+- aid: leeds-building-society:leeds-building-society-sme-api
+  name: Leeds Building Society SME API
+  description: Endpoint for getting Unsecured SME Loan data
+  humanURL: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  tags:
+  - SME
+  properties:
+  - type: OpenAPI
+    url: openapi/leeds-building-society-sme-api-openapi.yml
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-specs
 common:
 - type: DomainSecurity
   url: security/leeds-building-society-domain-security.yml
