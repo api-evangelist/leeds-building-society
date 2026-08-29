@@ -207,6 +207,9 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/opendata-api-specs
 common:
+- type: CapabilityMap
+  url: capabilities/leeds-building-society-capability-edges.yml
+  name: Leeds Building Society Business Capability Map
 - type: DomainSecurity
   url: security/leeds-building-society-domain-security.yml
 - type: LLMsTxt
