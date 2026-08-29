@@ -19,6 +19,18 @@ description: >-
   public developer portal, no OBIE Open Data endpoint, and no OBIE Read/Write
   APIs. The OBIE standard specifications below are captured as shared-standard
   references, not as Leeds Building Society API contracts.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: none
