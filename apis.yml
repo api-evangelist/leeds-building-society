@@ -52,7 +52,7 @@ tags:
 - Building Society
 - Mutual
 - Savings
-- Mortgages
+- Mortgage
 - Open Banking
 - PSD2
 - OBIE
@@ -101,6 +101,11 @@ apis:
     bank - no base URL was confirmed.
   humanURL: https://github.com/OpenBankingUK/read-write-api-specs
   tags:
+  - Payment Initiation
+  - PI
+  - OBIE
+  - FAPI
+  tags_raw:
   - Payment Initiation
   - PIS
   - OBIE
